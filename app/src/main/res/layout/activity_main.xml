@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/nativeScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <com.facebook.ads.NativeAdLayout
+            android:id="@+id/native_ad_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/nativeScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnIntertial"
+        android:text="Interstial"/>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/btnIntertial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnReward"
+        android:text="Interstial"/>
+
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/btnReward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnNativeBanner"
+        android:text="RewardAds"/>
+
+
+    <LinearLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
